@@ -16,11 +16,12 @@ export function DndArray(): JSX.Element {
         graphic: "string", //file name
         name: "string",
         size: [0, 0],
-        id: 0,
+        id: -1,
         hasFurniture: false,
         hasPainting: false,
         placeOnWall: false,
-        isFill: false
+        isFill: false,
+        comments: ["hi"]
     };
     const test2: DragTile = {
         type: "string",
@@ -29,11 +30,12 @@ export function DndArray(): JSX.Element {
         graphic: "string", //file name
         name: "string",
         size: [40, 40],
-        id: 0,
+        id: -1,
         hasFurniture: false,
         hasPainting: false,
         placeOnWall: false,
-        isFill: false
+        isFill: false,
+        comments: ["hi"]
     };
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [dragarr, setarr] = useState<DragTile[]>([test, test2]); //, test2]);
@@ -42,7 +44,7 @@ export function DndArray(): JSX.Element {
         <div id="dndarr">
             {dragarr.map((tile: DragTile) => {
                 return (
-                    <Box key={"" + tile.id} name={tile.name} id={tile.id}></Box>
+                    <Box key={"" + tile.id} name={tile.name} dt={tile}></Box>
                 );
             })}
         </div>

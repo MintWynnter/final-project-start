@@ -5,19 +5,22 @@ import { DragTile } from "./Interfaces/DragTile";
 import { Box } from "./components/Box";
 import { ItemTypes } from "./constants";
 
-export function CustomDragLayer(): JSX.Element {
+type layerProps = { scale: number };
+
+export function CustomDragLayer(props: layerProps): JSX.Element {
     const dragt: DragTile = {
         type: "string",
         design: "string",
         pos: [40, 0],
-        graphic: "string", //file name
+        graphic: "string",
         name: "Couch",
         size: [50, 20],
-        id: 0,
+        id: 1,
         hasFurniture: false,
         hasPainting: false,
         placeOnWall: false,
-        isFill: false
+        isFill: false,
+        comments: []
     };
     const [{ item, offset }, drop] = useDrop({
         accept: ItemTypes.DragTile,
@@ -26,9 +29,10 @@ export function CustomDragLayer(): JSX.Element {
             offset: monitor.getClientOffset()
         }),
         drop: () => {
+            console.log(item.data);
             addDragTile({
-                type: "string",
-                design: "string",
+                type: item.data.type,
+                design: item.data.design,
                 pos: [
                     notnull(currentOffset).x -
                         800 +
@@ -37,19 +41,16 @@ export function CustomDragLayer(): JSX.Element {
                         50 +
                         (notnull(grabOffset).y - notnull(sourceOffset).y)
                 ],
-                graphic: "string", //file name
-                name: "test",
-                size: [50, 75],
-                id: 1,
-                hasFurniture: false,
-                hasPainting: false,
-                placeOnWall: false,
-                isFill: false
+                graphic: item.data.graphic,
+                name: item.data.name,
+                size: [item.data.size[0], item.data.size[1]],
+                id: item.data.id,
+                hasFurniture: item.data.hasFurniture,
+                hasPainting: item.data.hasPainting,
+                placeOnWall: item.data.placeOnWall,
+                isFill: item.data.isFill,
+                comments: item.data.comments
             });
-            //console.log("x: " + notnull(currentOffset).x);
-            //console.log("x real: " + BoxArray[size - 1].pos[0]);
-            //console.log("y: " + notnull(currentOffset).y);
-            //console.log("y real: " + BoxArray[size - 1].pos[1]);
         }
     });
     const { currentOffset, grabOffset, sourceOffset } = useDragLayer(
@@ -60,10 +61,19 @@ export function CustomDragLayer(): JSX.Element {
         })
     );
     const [BoxArray, setBoxArray] = useState<DragTile[]>([dragt]);
-    const [size, setSize] = useState<number>(BoxArray.length);
+    const [size, setSize] = useState<number>(2);
     function addDragTile(dt: DragTile) {
-        setBoxArray([...BoxArray, { ...dt, id: size }]);
-        setSize(size + 1);
+        if (dt.id === -1) {
+            setBoxArray([...BoxArray, { ...dt, id: size }]);
+            setSize(size + 1);
+            return;
+        }
+        BoxArray.map((dtile: DragTile) => {
+            if (dt.id === dtile.id) {
+                dtile.pos = dt.pos;
+            }
+        });
+        setBoxArray([...BoxArray]);
     }
     function notnull(p: null | XYCoord) {
         return p === null ? { x: 0, y: 0 } : p;
@@ -83,16 +93,16 @@ export function CustomDragLayer(): JSX.Element {
                     <div
                         key={dt.id}
                         style={{
-                            height: dt.size[1] + "px",
-                            width: dt.size[0] + "px",
+                            height: dt.size[1] / props.scale + "px",
+                            width: dt.size[0] / props.scale + "px",
                             backgroundColor: "yellow",
                             position: "absolute",
-                            top: dt.pos[1] + "px",
-                            left: dt.pos[0] + "px",
+                            top: dt.pos[1] / props.scale + "px",
+                            left: dt.pos[0] / props.scale + "px",
                             zIndex: "1%"
                         }}
                     >
-                        <Box name={dt.name} id={dt.id}></Box>
+                        <Box name={dt.name} dt={dt}></Box>
                     </div>
                 );
             })}
