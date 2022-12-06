@@ -6,12 +6,12 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
   console.error
-    Warning: Encountered two children with the same key, `0`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    Warning: Encountered two children with the same key, `-1`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
         at div
         at DndArray (/home/runner/work/final-project-start/final-project-start/src/components/dndarr.tsx:41:31)
         at /home/runner/work/final-project-start/final-project-start/node_modules/react-dnd/dist/cjs/common/DndProvider.js:40:23
         at div
-        at App
+        at App (/home/runner/work/final-project-start/final-project-start/src/App.tsx:17:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -22,7 +22,7 @@ Browserslist: caniuse-lite is outdated. Please run:
       at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (110 ms)
+  ✕ renders the course name somewhere (116 ms)
 
   ● renders the course name somewhere
 
@@ -55,6 +55,18 @@ FAIL src/App.test.tsx
           [36m<h1>[39m
             [0m Harleen Chahal, Sean OSullivan, Matthew Hansen [0m
           [36m</h1>[39m
+          [36m<div>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"form-label"[39m
+            [36m>[39m
+              [0mScale[0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"form-control"[39m
+              [33mtype[39m=[32m"number"[39m
+              [33mvalue[39m=[32m"1"[39m
+            [36m/>[39m
+          [36m</div>[39m
           [36m<div[39m
             [33mid[39m=[32m"dndarr"[39m
           [36m>[39m
@@ -96,12 +108,12 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   18.81 |        0 |   21.95 |   19.79 |                   
- src                  |   16.92 |        0 |   20.83 |   17.18 |                   
-  App.tsx             |     100 |      100 |     100 |     100 |                   
+All files             |   18.18 |        0 |   20.93 |   19.04 |                   
+ src                  |   16.21 |        0 |   19.23 |   16.43 |                   
+  App.tsx             |   66.66 |        0 |      50 |   66.66 | 48                
   Board.tsx           |       0 |        0 |       0 |       0 | 8-44              
   BoardSquare.tsx     |       0 |        0 |       0 |       0 | 13-26             
-  CustomDragLayer.tsx |   69.23 |        0 |   57.14 |   69.23 | 30,67-71          
+  CustomDragLayer.tsx |      45 |        0 |      50 |      45 | 32-33,66-79       
   Draggable.tsx       |       0 |        0 |       0 |       0 |                   
   Overlay.tsx         |       0 |      100 |       0 |       0 | 7-8               
   Pic.tsx             |       0 |        0 |       0 |       0 | 5-13              
@@ -119,5 +131,5 @@ All files             |   18.81 |        0 |   21.95 |   19.79 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.473 s
+Time:        2.704 s
 Ran all test suites.
