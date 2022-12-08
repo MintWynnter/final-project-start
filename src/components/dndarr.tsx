@@ -39,7 +39,6 @@ export function DndArray(prop: layerProps): JSX.Element {
                         </h2>
                         <Box
                             key={"" + tile.id}
-                            name={tile.name}
                             dt={tile}
                             scale={prop.scale}
                         ></Box>

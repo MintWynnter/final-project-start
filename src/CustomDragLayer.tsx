@@ -23,12 +23,14 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                 type: item.data.type,
                 design: item.data.design,
                 pos: [
-                    notnull(currentOffset).x -
+                    (notnull(currentOffset).x -
                         800 +
-                        (notnull(grabOffset).x - notnull(sourceOffset).x),
-                    notnull(currentOffset).y -
+                        (notnull(grabOffset).x - notnull(sourceOffset).x)) *
+                        props.scale,
+                    (notnull(currentOffset).y -
                         50 +
-                        (notnull(grabOffset).y - notnull(sourceOffset).y)
+                        (notnull(grabOffset).y - notnull(sourceOffset).y)) *
+                        props.scale
                 ],
                 graphic: item.data.graphic,
                 name: item.data.name,
@@ -91,7 +93,7 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                             transform: "rotate(" + dt.rotation + "deg)"
                         }}
                     >
-                        <Box name={dt.name} dt={dt} scale={props.scale}></Box>
+                        <Box dt={dt} scale={props.scale}></Box>
                     </div>
                 );
             })}
