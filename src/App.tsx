@@ -53,6 +53,7 @@ function App(): JSX.Element {
                         }
                     />
                 </Form.Group>
+                <ul className="scrollList">(generateList(list))</ul>
                 <DndArray />
                 {/*<Row style={{ height: "700px" }}>
                     <Col>
