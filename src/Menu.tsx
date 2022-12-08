@@ -5,15 +5,21 @@ import { CustomDragLayer } from "./CustomDragLayer";
 import { DndArray } from "./components/dndarr";
 //import { Dropdown } from "./components/dropdown";
 //import Dndarr from "./components/dndarr";
-import { Row, Col, Form, Button, Table, Container } from "react-bootstrap";
+import { Row, Col, Form, Button, Container, Modal } from "react-bootstrap";
 import "./App.css";
 import { Box } from "./components/Box";
 import { DndContext, DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { setConstantValue } from "typescript";
 import { DragTile } from "./Interfaces/DragTile";
+import { tiles } from "./tileList";
+import { FilterDropdown, SortDropdown } from "./components/dropdown";
 
-export function Menu(): JSX.Element {
+type layerProps = {
+    setBoxArray: React.Dispatch<React.SetStateAction<DragTile[]>>;
+};
+
+export function Menu(props: layerProps) {
     //currently these tiles are not in use, tiles you see on website are in dndarr
     const testimg1: DragTile = {
         type: "string",
@@ -43,23 +49,72 @@ export function Menu(): JSX.Element {
         isFill: false,
         comments: []
     };
-    const [BoardTiles, setBoardTiles] = useState<DragTile[]>([
-        testimg1,
-        testimg2
-    ]);
+
+    function alphasort(arr: DragTile[]): DragTile[] {
+        arr.sort((a, b) => {
+            if (a.name > b.name) return 1;
+            if (b.name < b.name) return -1;
+            return 0;
+        });
+        return arr;
+    }
+    function typesort(arr: DragTile[]): DragTile[] {
+        return arr.sort((a, b) => {
+            if (a.type > b.type) return 1;
+            if (b.type < b.type) return -1;
+            return 0;
+        });
+    }
+
+    const [showModal, setShowModal] = useState(false);
+    const handleCloseModal = () => setShowModal(false);
+    const handleShowModal = () => setShowModal(true);
 
     const clearBoard = () => {
-        setBoardTiles([]);
+        props.setBoxArray([]);
+        handleCloseModal();
     };
 
+    const [SortArray, setSortArray] = useState<string>("None");
+    const [FilterArray, setFilterArray] = useState<string>("None");
+    const [Array, setArray] = useState<DragTile[]>(tiles);
+    console.log(FilterArray);
+    let arr = [...tiles];
+    if (SortArray === "Alphabetical") {
+        console.log("alpha");
+        //setArray(alphasort(arr)); breaks website
+        //arr.forEach((item) => console.log(item.name));
+    }
+    if (SortArray === "Tile Type") {
+        arr = typesort(arr);
+        //arr.forEach((item) => console.log(item.name));
+    }
     return (
         <div
             style={{
-                width: "50%",
-                height: "50%",
+                width: "51.6%",
+                height: "62%",
                 top: "2px"
             }}
         >
+            <Row>
+                <Col>
+                    <FilterDropdown
+                        filterOptions={["Kitchen", "Bathroom", "Bedroom"]}
+                        setFilterArray={setFilterArray}
+                    ></FilterDropdown>
+                </Col>
+                <Col>
+                    <SortDropdown
+                        sortOptions={[
+                            "Alphabetical",
+                            "Tile Type",
+                            "Design Type"
+                        ]}
+                        setSortArray={setSortArray}
+                    ></SortDropdown>
+                </Col>
+            </Row>
             <Container
                 style={{
                     height: "80%",
@@ -70,10 +125,26 @@ export function Menu(): JSX.Element {
                     <h2>Tiles</h2>
                     <Button
                         style={{ backgroundColor: "#0000FF" }}
-                        onClick={() => clearBoard()}
+                        onClick={handleShowModal}
                     >
                         Clear Room
                     </Button>
+                    <Modal show={showModal} onHide={handleCloseModal}>
+                        <Modal.Body>
+                            Are you sure you want to delete the current board?
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="success" onClick={clearBoard}>
+                                Yes
+                            </Button>
+                            <Button
+                                variant="success"
+                                onClick={handleCloseModal}
+                            >
+                                No
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </Row>
                 <div
                     className="my-custom-scrollbar"
@@ -84,63 +155,9 @@ export function Menu(): JSX.Element {
                         display: "inline-block"
                     }}
                 >
-                    <DndArray />
+                    <DndArray dragarr={arr}></DndArray>
                 </div>
             </Container>
         </div>
     );
-}
-
-{
-    /*
-export function Menu(): JSX.Element {
-    return (
-        <div
-            className="table-wrapper-scroll-y my-custom-scrollbar"
-            style={{
-                display: "inline-block"
-            }}
-        >
-            <Table
-                className="table-fixed table-responsive"
-                style={{
-                    width: "100%",
-                    border: "2px solid gray"
-                }}
-            >
-                <thead>
-                    <tr>
-                        <th>Tiles</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        {[
-                            "./red_couch.png",
-                            "./door.jpg",
-                            "./bosun_tally.jpg"
-                            // eslint-disable-next-line no-extra-parens
-                        ].map((s: string) => (
-                            <td key={s}>
-                                <Button
-                                    style={{
-                                        height: "70px",
-                                        width: "60%"
-                                    }}
-                                >
-                                    <img
-                                        src={require(s + "")}
-                                        width="100%"
-                                        height="100%"
-                                    />
-                                </Button>
-                            </td>
-                        ))}
-                    </tr>
-                </tbody>
-            </Table>
-        </div>
-    );
-}
-*/
 }

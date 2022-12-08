@@ -5,7 +5,11 @@ import { DragTile } from "./Interfaces/DragTile";
 import { Box } from "./components/Box";
 import { ItemTypes } from "./constants";
 
-type layerProps = { scale: number };
+type layerProps = {
+    scale: number;
+    BoxArray: DragTile[];
+    setBoxArray: React.Dispatch<React.SetStateAction<DragTile[]>>;
+};
 
 export function CustomDragLayer(props: layerProps): JSX.Element {
     const dragt: DragTile = {
@@ -60,20 +64,20 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
             sourceOffset: monitor.getInitialSourceClientOffset()
         })
     );
-    const [BoxArray, setBoxArray] = useState<DragTile[]>([dragt]);
+    //const [BoxArray, setBoxArray] = useState<DragTile[]>(props.dragt);
     const [size, setSize] = useState<number>(2);
     function addDragTile(dt: DragTile) {
         if (dt.id === -1) {
-            setBoxArray([...BoxArray, { ...dt, id: size }]);
+            props.setBoxArray([...props.BoxArray, { ...dt, id: size }]);
             setSize(size + 1);
             return;
         }
-        BoxArray.map((dtile: DragTile) => {
+        props.BoxArray.map((dtile: DragTile) => {
             if (dt.id === dtile.id) {
                 dtile.pos = dt.pos;
             }
         });
-        setBoxArray([...BoxArray]);
+        props.setBoxArray([...props.BoxArray]);
     }
     function notnull(p: null | XYCoord) {
         return p === null ? { x: 0, y: 0 } : p;
@@ -88,7 +92,7 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                 position: "relative"
             }}
         >
-            {BoxArray.map((dt: DragTile) => {
+            {props.BoxArray.map((dt: DragTile) => {
                 return (
                     <div
                         key={dt.id}

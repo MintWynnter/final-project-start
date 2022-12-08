@@ -17,9 +17,8 @@ export function Box({ name, dt }: BoxProps): JSX.Element {
         <div
             ref={drag}
             style={{
-                height: "60px",
-                width: "60px",
-                backgroundColor: "yellow",
+                height: dt.size[1],
+                width: dt.size[0],
                 display: "inline-block"
             }}
         >

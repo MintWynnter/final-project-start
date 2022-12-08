@@ -6,9 +6,13 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { DragTile } from "../Interfaces/DragTile";
 import BoardSquare from "../BoardSquare";
 import { Box } from "./Box";
+import { tiles } from "../tileList";
 
+type layerProps = {
+    dragarr: DragTile[];
+};
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function DndArray(): JSX.Element {
+export function DndArray(prop: layerProps): JSX.Element {
     const test: DragTile = {
         type: "string",
         design: "string",
@@ -38,7 +42,8 @@ export function DndArray(): JSX.Element {
         comments: ["hi"]
     };
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [dragarr, setarr] = useState<DragTile[]>([test, test2]); //, test2]);
+    //const [dragarr, setarr] = useState<DragTile[]>(tiles); //, test2]);
+
     //we will likely have this be in a higher component that will pass down the filled array
     return (
         <div
@@ -48,7 +53,7 @@ export function DndArray(): JSX.Element {
                 border: "1px solid black"
             }}
         >
-            {dragarr.map((tile: DragTile) => {
+            {prop.dragarr.map((tile: DragTile) => {
                 return (
                     <div
                         key={tile.id * 3}
@@ -57,7 +62,14 @@ export function DndArray(): JSX.Element {
                             border: "1px solid black"
                         }}
                     >
-                        <h3>{tile.name}</h3>
+                        <h2
+                            style={{
+                                fontSize: 14,
+                                textAlign: "center"
+                            }}
+                        >
+                            {tile.name}
+                        </h2>
                         <Box
                             key={"" + tile.id}
                             name={tile.name}

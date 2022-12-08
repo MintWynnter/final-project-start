@@ -22,15 +22,18 @@ function typesort(arr: DragTile[]): DragTile[] {
 }
 */
 export function FilterDropdown({
-    filterOptions
+    filterOptions,
+    setFilterArray
 }: {
     filterOptions: string[];
+    setFilterArray: React.Dispatch<React.SetStateAction<string>>;
 }): JSX.Element {
     const default_option = filterOptions[0];
     const [choice, setChoice] = useState<string>(default_option);
 
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
+        setFilterArray(choice); //state sent to parent
     }
 
     return (
@@ -44,7 +47,7 @@ export function FilterDropdown({
                     bottom: "10%",
                     left: "0%",
                     height: "20%",
-                    width: "100%"
+                    width: "95%"
                 }}
             >
                 <Form.Group controlId="formChoice">
@@ -63,15 +66,18 @@ export function FilterDropdown({
 }
 
 export function SortDropdown({
-    sortOptions
+    sortOptions,
+    setSortArray
 }: {
     sortOptions: string[];
+    setSortArray: React.Dispatch<React.SetStateAction<string>>;
 }): JSX.Element {
     const default_option = sortOptions[0];
     const [choice, setChoice] = useState<string>(default_option);
 
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
+        setSortArray(choice);
     }
 
     return (
@@ -85,7 +91,7 @@ export function SortDropdown({
                     bottom: "70%",
                     left: "0%",
                     height: "20%",
-                    width: "100%"
+                    width: "95%"
                 }}
             >
                 <Form.Group controlId="formChoice">
