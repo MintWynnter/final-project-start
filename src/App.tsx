@@ -13,6 +13,7 @@ import { DndContext, DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { setConstantValue } from "typescript";
 import { Menu } from "./Menu";
+import { scrollList } from "./components/scrollList";
 
 function App(): JSX.Element {
     const [scale, setScale] = useState<number>(1);
@@ -92,3 +93,7 @@ function App(): JSX.Element {
 }
 
 export default App;
+function generateList(proplist: any): React.ReactNode {
+    throw new Error("Function not implemented.");
+}
+
