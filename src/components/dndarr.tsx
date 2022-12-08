@@ -15,7 +15,8 @@ export function DndArray(): JSX.Element {
         hasPainting: false,
         placeOnWall: false,
         isFill: false,
-        comments: ["hi"]
+        comments: ["hi"],
+        rotation: 0
     };
     const test2: DragTile = {
         type: "string",
@@ -29,9 +30,10 @@ export function DndArray(): JSX.Element {
         hasPainting: false,
         placeOnWall: false,
         isFill: false,
-        comments: ["hi"]
+        comments: ["hi"],
+        rotation: 0
     };
-    const [dragarr, setarr] = useState<DragTile[]>([test, test2]); //, test2]);
+    const [dragarr] = useState<DragTile[]>([test, test2]); //, test2]);
     return (
         <div
             id="dndarr"

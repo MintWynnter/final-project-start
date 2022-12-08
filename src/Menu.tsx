@@ -18,7 +18,8 @@ export function Menu(): JSX.Element {
         hasPainting: false,
         placeOnWall: false,
         isFill: false,
-        comments: []
+        comments: [],
+        rotation: 0
     };
     const testimg2: DragTile = {
         type: "string",
@@ -32,12 +33,10 @@ export function Menu(): JSX.Element {
         hasPainting: false,
         placeOnWall: false,
         isFill: false,
-        comments: []
+        comments: [],
+        rotation: 0
     };
-    const [BoardTiles, setBoardTiles] = useState<DragTile[]>([
-        testimg1,
-        testimg2
-    ]);
+    const [, setBoardTiles] = useState<DragTile[]>([testimg1, testimg2]);
 
     const clearBoard = () => {
         setBoardTiles([]);

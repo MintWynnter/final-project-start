@@ -100,8 +100,7 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                             position: "absolute",
                             top: dt.pos[1] / props.scale + "px",
                             left: dt.pos[0] / props.scale + "px",
-                            zIndex: "1%"
-                            transform: ""
+                            transform: "rotate(" + dt.rotation + "deg)"
                         }}
                     >
                         <Box name={dt.name} dt={dt}></Box>
