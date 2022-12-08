@@ -1,16 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import Board from "./Board";
-import { CustomDragLayer } from "./CustomDragLayer";
 import { DndArray } from "./components/dndarr";
-//import { Dropdown } from "./components/dropdown";
-//import Dndarr from "./components/dndarr";
-import { Row, Col, Form, Button, Table, Container } from "react-bootstrap";
+import { Row, Button, Container } from "react-bootstrap";
 import "./App.css";
-import { Box } from "./components/Box";
-import { DndContext, DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import { setConstantValue } from "typescript";
 import { DragTile } from "./Interfaces/DragTile";
 
 export function Menu(): JSX.Element {
@@ -27,7 +18,8 @@ export function Menu(): JSX.Element {
         hasPainting: false,
         placeOnWall: false,
         isFill: false,
-        comments: []
+        comments: [],
+        rotation: 0
     };
     const testimg2: DragTile = {
         type: "string",
@@ -41,12 +33,10 @@ export function Menu(): JSX.Element {
         hasPainting: false,
         placeOnWall: false,
         isFill: false,
-        comments: []
+        comments: [],
+        rotation: 0
     };
-    const [BoardTiles, setBoardTiles] = useState<DragTile[]>([
-        testimg1,
-        testimg2
-    ]);
+    const [, setBoardTiles] = useState<DragTile[]>([testimg1, testimg2]);
 
     const clearBoard = () => {
         setBoardTiles([]);

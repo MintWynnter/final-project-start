@@ -12,7 +12,8 @@ const Couch: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const WoodenChair: DragTile = {
@@ -27,7 +28,8 @@ const WoodenChair: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const LoveSeat: DragTile = {
@@ -42,7 +44,8 @@ const LoveSeat: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const roundTable: DragTile = {
@@ -57,7 +60,8 @@ const roundTable: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const rectangleTable: DragTile = {
@@ -72,7 +76,8 @@ const rectangleTable: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 //5
 const nightStand: DragTile = {
@@ -87,7 +92,8 @@ const nightStand: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const fridge: DragTile = {
@@ -102,7 +108,8 @@ const fridge: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const stove: DragTile = {
@@ -117,7 +124,8 @@ const stove: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const countertop: DragTile = {
@@ -132,7 +140,8 @@ const countertop: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const door: DragTile = {
@@ -147,7 +156,8 @@ const door: DragTile = {
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 export const tiles = [

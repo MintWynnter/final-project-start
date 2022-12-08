@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useDragLayer, useDrop, XYCoord } from "react-dnd";
 import React, { useState } from "react";
 import { DragTile } from "./Interfaces/DragTile";
@@ -20,9 +19,10 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
         hasPainting: false,
         placeOnWall: false,
         isFill: false,
-        comments: []
+        comments: [],
+        rotation: 0
     };
-    const [{ item, offset }, drop] = useDrop({
+    const [{ item }, drop] = useDrop({
         accept: ItemTypes.DragTile,
         collect: (monitor) => ({
             item: monitor.getItem(),
@@ -49,7 +49,8 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                 hasPainting: item.data.hasPainting,
                 placeOnWall: item.data.placeOnWall,
                 isFill: item.data.isFill,
-                comments: item.data.comments
+                comments: item.data.comments,
+                rotation: item.data.rotation
             });
         }
     });
@@ -99,7 +100,7 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                             position: "absolute",
                             top: dt.pos[1] / props.scale + "px",
                             left: dt.pos[0] / props.scale + "px",
-                            zIndex: "1%"
+                            transform: "rotate(" + dt.rotation + "deg)"
                         }}
                     >
                         <Box name={dt.name} dt={dt}></Box>

@@ -1,6 +1,5 @@
-import ReactDOM from "react-dom";
 import { Button } from "react-bootstrap";
-import React, { useState } from "react";
+import React from "react";
 import { Form } from "react-bootstrap";
 
 export function rotate(degrees: number): JSX.Element {
