@@ -21,29 +21,29 @@ File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line 
 ----------------------|---------|----------|---------|---------|-------------------
 All files             |       0 |        0 |       0 |       0 |                   
  src                  |       0 |        0 |       0 |       0 |                   
-  App.tsx             |       0 |        0 |       0 |       0 | 18-49             
+  App.tsx             |       0 |        0 |       0 |       0 | 11-42             
   Board.tsx           |       0 |        0 |       0 |       0 | 8-44              
   BoardSquare.tsx     |       0 |        0 |       0 |       0 | 13-26             
-  CustomDragLayer.tsx |       0 |        0 |       0 |       0 | 11-92             
+  CustomDragLayer.tsx |       0 |        0 |       0 |       0 | 10-93             
   Draggable.tsx       |       0 |        0 |       0 |       0 |                   
-  Menu.tsx            |       0 |      100 |       0 |       0 | 18-73             
+  Menu.tsx            |       0 |      100 |       0 |       0 | 9-63              
   Overlay.tsx         |       0 |      100 |       0 |       0 | 7-8               
   Pic.tsx             |       0 |        0 |       0 |       0 | 5-13              
   Square.tsx          |       0 |        0 |       0 |       0 | 7-11              
   constants.ts        |       0 |      100 |     100 |       0 | 1                 
   game.ts             |       0 |        0 |       0 |       0 | 1-27              
-  rotate.tsx          |       0 |        0 |       0 |       0 | 8-30              
-  tileList.ts         |       0 |      100 |     100 |       0 | 3-153             
+  rotate.tsx          |       0 |        0 |       0 |       0 | 7-29              
+  tileList.ts         |       0 |      100 |     100 |       0 | 3-163             
  src/Interfaces       |       0 |        0 |       0 |       0 |                   
   DragTile.ts         |       0 |        0 |       0 |       0 |                   
- src/components       |       0 |      100 |       0 |       0 |                   
-  Box.tsx             |       0 |      100 |       0 |       0 | 10-16             
+ src/components       |       0 |        0 |       0 |       0 |                   
+  Box.tsx             |       0 |        0 |       0 |       0 | 9-35              
   Tile.tsx            |       0 |      100 |       0 |       0 | 6-33              
-  dndarr.tsx          |       0 |      100 |       0 |       0 | 12-52             
+  dndarr.tsx          |       0 |      100 |       0 |       0 | 6-46              
   dropdown.tsx        |       0 |      100 |       0 |       0 | 29-95             
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.951 s
+Time:        2.334 s
 Ran all test suites.
