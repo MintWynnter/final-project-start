@@ -1,19 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import Board from "./Board";
 import { CustomDragLayer } from "./CustomDragLayer";
-import { DndArray } from "./components/dndarr";
 //import { Dropdown } from "./components/dropdown";
 //import Dndarr from "./components/dndarr";
-import { FilterDropdown, SortDropdown } from "./components/dropdown";
-import { Row, Col, Form, Button, Table } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import "./App.css";
-import { Box } from "./components/Box";
-import { DndContext, DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { setConstantValue } from "typescript";
 import { Menu } from "./Menu";
-import { tiles } from "./tileList.js";
+import { DndProvider } from "react-dnd";
 import { DragTile } from "./Interfaces/DragTile";
 
 function App(): JSX.Element {
@@ -48,7 +41,7 @@ function App(): JSX.Element {
                     {/*<Box name="couch" id={1}></Box>*/}
                 </div>
                 <h1> Harleen Chahal, Sean OSullivan, Matthew Hansen </h1>
-                <div style={{ width: "50%" }}>
+                <div style={{ width: "50%", border: "7px solid white" }}>
                     <Form.Group>
                         <Form.Label>Scale</Form.Label>
                         <Form.Control
@@ -66,7 +59,7 @@ function App(): JSX.Element {
                         />
                     </Form.Group>
                 </div>
-                <Menu setBoxArray={setBoxArray}></Menu>
+                <Menu setBoxArray={setBoxArray} scale={scale}></Menu>
                 {/*<DndArray />
                 <Row style={{ height: "700px" }}>
                     <Col>

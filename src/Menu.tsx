@@ -1,54 +1,20 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import Board from "./Board";
-import { CustomDragLayer } from "./CustomDragLayer";
 import { DndArray } from "./components/dndarr";
 //import { Dropdown } from "./components/dropdown";
 //import Dndarr from "./components/dndarr";
-import { Row, Col, Form, Button, Container, Modal } from "react-bootstrap";
+import { Row, Col, Button, Container, Modal } from "react-bootstrap";
 import "./App.css";
-import { Box } from "./components/Box";
-import { DndContext, DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import { setConstantValue } from "typescript";
 import { DragTile } from "./Interfaces/DragTile";
 import { tiles } from "./tileList";
 import { FilterDropdown, SortDropdown } from "./components/dropdown";
 
 type layerProps = {
     setBoxArray: React.Dispatch<React.SetStateAction<DragTile[]>>;
+    scale: number;
 };
 
 export function Menu(props: layerProps) {
     //currently these tiles are not in use, tiles you see on website are in dndarr
-    const testimg1: DragTile = {
-        type: "string",
-        design: "string",
-        pos: [40, 0],
-        graphic: "./red_couch.png",
-        name: "Couch",
-        size: [50, 20],
-        id: 1,
-        hasFurniture: false,
-        hasPainting: false,
-        placeOnWall: false,
-        isFill: false,
-        comments: []
-    };
-    const testimg2: DragTile = {
-        type: "string",
-        design: "string",
-        pos: [40, 0],
-        graphic: "./door.jpg",
-        name: "Door",
-        size: [50, 20],
-        id: 1,
-        hasFurniture: false,
-        hasPainting: false,
-        placeOnWall: false,
-        isFill: false,
-        comments: []
-    };
 
     function alphasort(arr: DragTile[]): DragTile[] {
         arr.sort((a, b) => {
@@ -77,11 +43,12 @@ export function Menu(props: layerProps) {
 
     const [SortArray, setSortArray] = useState<string>("None");
     const [FilterArray, setFilterArray] = useState<string>("None");
-    const [Array, setArray] = useState<DragTile[]>(tiles);
+    //const [Array, setArray] = useState<DragTile[]>(tiles);
     console.log(FilterArray);
     let arr = [...tiles];
     if (SortArray === "Alphabetical") {
         console.log("alpha");
+        alphasort(arr);
         //setArray(alphasort(arr)); breaks website
         //arr.forEach((item) => console.log(item.name));
     }
@@ -155,7 +122,7 @@ export function Menu(props: layerProps) {
                         display: "inline-block"
                     }}
                 >
-                    <DndArray dragarr={arr}></DndArray>
+                    <DndArray dragarr={arr} scale={1}></DndArray>
                 </div>
             </Container>
         </div>

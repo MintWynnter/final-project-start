@@ -11,4 +11,5 @@ export interface DragTile {
     placeOnWall: boolean;
     isFill: boolean;
     comments: string[];
+    rotation: number;
 }

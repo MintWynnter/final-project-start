@@ -1,18 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import ReactDOM from "react-dom";
-import Board from "./Board";
 //import { CustomDragLayer } from "./CustomDragLayer";
 import "./index.css";
 import { observe } from "./game";
 import reportWebVitals from "./reportWebVitals";
-//import { Dropdown } from "./components/dropdown";
-//import Dndarr from "./components/dndarr";
-import { FilterDropdown, SortDropdown } from "./components/dropdown";
-import { Row, Col } from "react-bootstrap";
 import App from "./App";
 
-observe((picPosition: [number, number]) => {
+observe(() => {
     ReactDOM.render(
         <React.StrictMode>
             <App></App>

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useDragLayer, useDrop, XYCoord } from "react-dnd";
 import React, { useState } from "react";
 import { DragTile } from "./Interfaces/DragTile";
@@ -12,21 +11,7 @@ type layerProps = {
 };
 
 export function CustomDragLayer(props: layerProps): JSX.Element {
-    const dragt: DragTile = {
-        type: "string",
-        design: "string",
-        pos: [40, 0],
-        graphic: "./red_couch.png",
-        name: "Couch",
-        size: [50, 20],
-        id: 10,
-        hasFurniture: false,
-        hasPainting: false,
-        placeOnWall: false,
-        isFill: false,
-        comments: []
-    };
-    const [{ item, offset }, drop] = useDrop({
+    const [{ item }, drop] = useDrop({
         accept: ItemTypes.DragTile,
         collect: (monitor) => ({
             item: monitor.getItem(),
@@ -53,7 +38,8 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                 hasPainting: item.data.hasPainting,
                 placeOnWall: item.data.placeOnWall,
                 isFill: item.data.isFill,
-                comments: item.data.comments
+                comments: item.data.comments,
+                rotation: item.data.rotation
             });
         }
     });
@@ -99,14 +85,13 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                         style={{
                             height: dt.size[1] / props.scale + "px",
                             width: dt.size[0] / props.scale + "px",
-                            backgroundColor: "yellow",
                             position: "absolute",
                             top: dt.pos[1] / props.scale + "px",
                             left: dt.pos[0] / props.scale + "px",
-                            zIndex: "1%"
+                            transform: "rotate(" + dt.rotation + "deg)"
                         }}
                     >
-                        <Box name={dt.name} dt={dt}></Box>
+                        <Box name={dt.name} dt={dt} scale={props.scale}></Box>
                     </div>
                 );
             })}
