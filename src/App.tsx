@@ -6,12 +6,13 @@ import { DndArray } from "./components/dndarr";
 //import { Dropdown } from "./components/dropdown";
 //import Dndarr from "./components/dndarr";
 import { FilterDropdown, SortDropdown } from "./components/dropdown";
-import { Row, Col, Form } from "react-bootstrap";
+import { Row, Col, Form, Button, Table } from "react-bootstrap";
 import "./App.css";
 import { Box } from "./components/Box";
 import { DndContext, DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { setConstantValue } from "typescript";
+import { Menu } from "./Menu";
 
 function App(): JSX.Element {
     const [scale, setScale] = useState<number>(1);
@@ -53,8 +54,25 @@ function App(): JSX.Element {
                         }
                     />
                 </Form.Group>
-                <DndArray />
-                {/*<Row style={{ height: "700px" }}>
+                <Row xs={4} md={8} lg={12}>
+                    <Col>
+                        <FilterDropdown
+                            filterOptions={["Kitchen", "Bathroom", "Bedroom"]}
+                        ></FilterDropdown>
+                    </Col>
+                    <Col>
+                        <SortDropdown
+                            sortOptions={[
+                                "Alphabetical",
+                                "Tile Type",
+                                "Design Type"
+                            ]}
+                        ></SortDropdown>
+                    </Col>
+                </Row>
+                <Menu></Menu>
+                {/*<DndArray />
+                <Row style={{ height: "700px" }}>
                     <Col>
                         <FilterDropdown
                             filterOptions={["Kitchen", "Bathroom", "Bedroom"]}
