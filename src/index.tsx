@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+//import { CustomDragLayer } from "./CustomDragLayer";
 import "./index.css";
 import { observe } from "./game";
 import reportWebVitals from "./reportWebVitals";
