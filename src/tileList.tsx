@@ -4,450 +4,480 @@ const Couch: DragTile = {
     type: "furniture",
     design: "white",
     pos: [0, 0],
-    graphic: require("./images/couch.png"), //file name
+    graphic: "./images/couch.jpeg", //file name
     name: "Couch",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const WoodenChair: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: require("./images/woodChair.png"), //file name
+    graphic: "./images/woodChair.jpeg", //file name
     name: "Wooden Chair",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const LoveSeat: DragTile = {
     type: "furniture",
     design: "white",
     pos: [0, 0],
-    graphic: require("./images/loveSeat.png"), //file name
+    graphic: "./images/loveSeat.jpeg", //file name
     name: "Love Seat",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const roundTable: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: require("./images/roundTable.png"), //file name
+    graphic: "./images/roundTable.jpeg", //file name
     name: "Round Coffee Table",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const rectangleTable: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: require("./images/rectangleTable.png"), //file name
+    graphic: "./images/rectangleTable.jpeg", //file name
     name: "Rectangle Coffee Table",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
-//5
+
 const nightStand: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: require("./images/nightStand.png"), //file name
+    graphic: "./images/nightStand.jpeg", //file name
     name: "Night Stand",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const fridge: DragTile = {
     type: "appliance",
     design: "stainless steel",
     pos: [0, 0],
-    graphic: require("./images/fridge.png"), //file name
+    graphic: "./images/fridge.jpeg", //file name
     name: "Refrigerator",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const stove: DragTile = {
     type: "appliance",
     design: "stainless steel",
     pos: [0, 0],
-    graphic: require("./images/stove.png"), //file name
+    graphic: "./images/stove.jpeg", //file name
     name: "Stove",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const countertop: DragTile = {
     type: "kitchen",
     design: "granite",
     pos: [0, 0],
-    graphic: require("./images/countertop.png"), //file name
+    graphic: "./images/countertop.jpeg",
     name: "Countertop",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const door: DragTile = {
     type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/door.png"), //file name
+    graphic: "./images/door.png",
     name: "Door",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const bathtub: DragTile = {
     type: "bathroom",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/bathtub.png"), //file name
+    graphic: "./images/bathtub.png",
     name: "Bathtub",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const kitchensink: DragTile = {
     type: "Kitchen",
     design: "stainless steel",
     pos: [0, 0],
-    graphic: require("./images/kitchensink.png"), //file name
+    graphic: "./images/kitchensink.png",
     name: "Kitchen Sink",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const island: DragTile = {
     type: "Kitchen",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/island.png"), //file name
+    graphic: "./images/island.png",
     name: "Kitchen Island",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const tv: DragTile = {
     type: "living room",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/tv.png"), //file name
+    graphic: "./images/tv.png",
     name: "TV",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const bed: DragTile = {
     type: "Bedroom",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/bed.png"), //file name
+    graphic: "./images/bed.png",
     name: "Door",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const diningtabler: DragTile = {
     type: "Dining room",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/diningtabler.png"), //file name
+    graphic: "./images/diningtabler.png",
     name: "Rectangle Dining Table",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const diningtablec: DragTile = {
     type: "Dining room",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/diningtablec.png"), //file name
+    graphic: "./images/diningtablec.png",
     name: "Round Dining Table",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const mplant: DragTile = {
     type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/plant.png"), //file name
+    graphic: "./images/plant.png",
     name: "Monstera Plant",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const sidetable: DragTile = {
     type: "Living room",
     design: "wood",
     pos: [0, 0],
-    graphic: require("./images/plant.png"), //file name
+    graphic: "./images/plant.png",
     name: "Side Table",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const dressingtable: DragTile = {
     type: "Bedroom",
     design: "wood",
     pos: [0, 0],
-    graphic: require("./images/dressingtable.png"), //file name
+    graphic: "./images/dressingtable.png",
     name: "Dressing table",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const twinbed: DragTile = {
     type: "Bedroom",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/twinbed.png"), //file name
+    graphic: "./images/twinbed.png",
     name: "Twin Bed",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const doublesink: DragTile = {
     type: "Bathroom",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/doublesink.png"), //file name
+    graphic: "./images/doublesink.png",
     name: "Double Bathroom Vanity",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const bathroomSink: DragTile = {
     type: "Bathroom",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/singlevanity.png"), //file name
+    graphic: "./images/singlevanity.png",
     name: "Single Bathroom Vanity",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const woodfloor: DragTile = {
     type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/woodfloor.png"), //file name
+    graphic: "./images/woodfloor.png",
     name: "Wood Floor",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const tilefloor: DragTile = {
     type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/tilefloor.png"), //file name
+    graphic: "./images/tilefloor.png",
     name: "Tile Floor",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const lamp: DragTile = {
     type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/lamp.png"), //file name
+    graphic: "./images/lamp.png",
     name: "Table Lamp",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const stairs: DragTile = {
     type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/stairs.png"), //file name
+    graphic: "./images/stairs.png",
     name: "Stairs",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const carpet: DragTile = {
     type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/carpet.png"), //file name
+    graphic: "./images/carpet.png",
     name: "Carpet",
-    size: [50, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const rug: DragTile = {
-    type: "Living Room",
+    type: "build",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/rug.png"), //file name
-    name: "Rug",
-    size: [50, 20],
+    graphic: "./images/rug.png",
+    name: "Area Rug",
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 const bathrug: DragTile = {
     type: "Bathroom",
     design: "any",
     pos: [0, 0],
-    graphic: require("./images/bathrug.png"), //file name
+    graphic: "./images/bathrug.png",
     name: "Bathroom Rug",
-    size: [25, 20],
+    size: [150, 150],
     id: -1,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
-    comments: []
+    comments: [],
+    rotation: 0
 };
 
 export const tiles = [
