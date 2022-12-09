@@ -1,5 +1,5 @@
 import React from "react";
-import { useDragLayer, useDrop } from "react-dnd";
+import { useDrop } from "react-dnd";
 import { ItemTypes } from "./constants";
 import { DragTile } from "./Interfaces/DragTile";
 
