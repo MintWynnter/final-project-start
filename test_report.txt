@@ -26,7 +26,7 @@ All files             |       0 |        0 |       0 |       0 |
   BoardSquare.tsx     |       0 |        0 |       0 |       0 | 13-26             
   CustomDragLayer.tsx |       0 |        0 |       0 |       0 | 14-84             
   Draggable.tsx       |       0 |        0 |       0 |       0 |                   
-  Menu.tsx            |       0 |        0 |       0 |       0 | 20-61             
+  Menu.tsx            |       0 |      100 |       0 |       0 | 18-33             
   Overlay.tsx         |       0 |      100 |       0 |       0 | 7-8               
   Pic.tsx             |       0 |        0 |       0 |       0 | 5-13              
   Square.tsx          |       0 |        0 |       0 |       0 | 7-11              
@@ -37,14 +37,14 @@ All files             |       0 |        0 |       0 |       0 |
   tileList.tsx        |       0 |      100 |     100 |       0 | 3-483             
  src/Interfaces       |       0 |        0 |       0 |       0 |                   
   DragTile.ts         |       0 |        0 |       0 |       0 |                   
- src/components       |       0 |      100 |       0 |       0 |                   
+ src/components       |       0 |        0 |       0 |       0 |                   
   Box.tsx             |       0 |      100 |       0 |       0 | 7-17              
   Tile.tsx            |       0 |      100 |       0 |       0 | 6-33              
   dndarr.tsx          |       0 |      100 |       0 |       0 | 13-22             
-  dropdown.tsx        |       0 |      100 |       0 |       0 | 31-101            
+  dropdown.tsx        |       0 |        0 |       0 |       0 | 34-142            
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.329 s
+Time:        2.513 s
 Ran all test suites.
