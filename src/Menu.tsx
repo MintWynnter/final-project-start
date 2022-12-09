@@ -66,24 +66,26 @@ export function Menu(props: layerProps) {
                 top: "2px"
             }}
         >
-            <Row>
-                <Col>
-                    <FilterDropdown
-                        filterOptions={["Kitchen", "Bathroom", "Bedroom"]}
-                        setFilterArray={setFilterArray}
-                    ></FilterDropdown>
-                </Col>
-                <Col>
-                    <SortDropdown
-                        sortOptions={[
-                            "Alphabetical",
-                            "Tile Type",
-                            "Design Type"
-                        ]}
-                        setSortArray={setSortArray}
-                    ></SortDropdown>
-                </Col>
-            </Row>
+            <Container>
+                <Row>
+                    <Col>
+                        <FilterDropdown
+                            filterOptions={["Kitchen", "Bathroom", "Bedroom"]}
+                            setFilterArray={setFilterArray}
+                        ></FilterDropdown>
+                    </Col>
+                    <Col>
+                        <SortDropdown
+                            sortOptions={[
+                                "Alphabetical",
+                                "Tile Type",
+                                "Design Type"
+                            ]}
+                            setSortArray={setSortArray}
+                        ></SortDropdown>
+                    </Col>
+                </Row>
+            </Container>
             <Container
                 style={{
                     height: "80%",
