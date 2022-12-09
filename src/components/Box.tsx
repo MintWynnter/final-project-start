@@ -23,7 +23,7 @@ export function Box({ dt, scale }: BoxProps): JSX.Element {
                 display: "inline-block"
             }}
         >
-            {console.log(dt.graphic)}
+            {/*console.log(dt.graphic)*/}
             <img src={require(dt.graphic + "")} width={WIDTH} height={HEIGHT} />
         </div>
     );
