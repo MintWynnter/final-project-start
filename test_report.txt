@@ -40,11 +40,11 @@ All files             |       0 |        0 |       0 |       0 |
  src/components       |       0 |      100 |       0 |       0 |                   
   Box.tsx             |       0 |      100 |       0 |       0 | 7-17              
   Tile.tsx            |       0 |      100 |       0 |       0 | 6-33              
-  dndarr.tsx          |       0 |      100 |       0 |       0 | 15-24             
+  dndarr.tsx          |       0 |      100 |       0 |       0 | 13-22             
   dropdown.tsx        |       0 |      100 |       0 |       0 | 31-101            
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.881 s
+Time:        2.875 s
 Ran all test suites.
