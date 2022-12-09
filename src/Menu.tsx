@@ -15,7 +15,7 @@ type layerProps = {
 
 export function Menu(props: layerProps) {
     //currently these tiles are not in use, tiles you see on website are in dndarr
-
+    const [arr, setArr] = useState<DragTile[]>([...tiles]);
     function alphasort(arr: DragTile[]): DragTile[] {
         arr.sort((a, b) => {
             if (a.name > b.name) return 1;
@@ -47,16 +47,20 @@ export function Menu(props: layerProps) {
     //const incRenderVar = renderVar;
     //const [Array, setArray] = useState<DragTile[]>(tiles);
     console.log(FilterArray);
-    let arr = [...tiles];
-    if (SortArray === "Alphabetical") {
-        console.log("alpha");
-        arr = alphasort(arr);
-        //setArray(alphasort(arr)); breaks website
-        //arr.forEach((item) => console.log(item.name));
-    }
-    if (SortArray === "Tile Type") {
-        arr = tiles.filter((dt: DragTile): boolean => dt.type === "kitchen");
-        //arr.forEach((item) => console.log(item.name));
+    function sorting(): void {
+        if (SortArray === "Alphabetical") {
+            console.log("alpha");
+            setArr(alphasort(arr));
+            //setArray(alphasort(arr)); breaks website
+            //arr.forEach((item) => console.log(item.name));
+        }
+        if (SortArray === "Tile Type") {
+            const tmparr = tiles.filter(
+                (dt: DragTile): boolean => dt.type === "kitchen"
+            );
+            setArr([...tmparr]);
+            //arr.forEach((item) => console.log(item.name));
+        }
     }
     return (
         <div
@@ -81,7 +85,7 @@ export function Menu(props: layerProps) {
                                 "Tile Type",
                                 "Design Type"
                             ]}
-                            setSortArray={setSortArray}
+                            setSortArray={sorting}
                         ></SortDropdown>
                     </Col>
                 </Row>

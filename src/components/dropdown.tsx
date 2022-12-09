@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { DragTile } from "../Interfaces/DragTile";
 //import { arrayBuffer } from "stream/consumers";
 //import { DragTile } from "../Interfaces/DragTile";
 /*
@@ -67,17 +68,26 @@ export function FilterDropdown({
 
 export function SortDropdown({
     sortOptions,
-    setSortArray
+    setSortArray,
+    sortArray
 }: {
     sortOptions: string[];
-    setSortArray: React.Dispatch<React.SetStateAction<string>>;
+    setSortArray: React.Dispatch<React.SetStateAction<DragTile[]>>;
+    sortArray: DragTile[];
 }): JSX.Element {
     const default_option = sortOptions[0];
     const [choice, setChoice] = useState<string>(default_option);
-
+    function alphasort(arr: DragTile[]): DragTile[] {
+        arr.sort((a, b) => {
+            if (a.name > b.name) return 1;
+            if (b.name < b.name) return -1;
+            return 0;
+        });
+        return arr;
+    }
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
-        setSortArray(event.target.value);
+        setSortArray(sortArray);
     }
 
     return (
