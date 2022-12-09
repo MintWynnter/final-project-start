@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/final-project-start/static/css/main.39f589df.css",
-    "main.js": "/final-project-start/static/js/main.3a5a9cd8.js",
+    "main.js": "/final-project-start/static/js/main.ffc8dc05.js",
     "static/js/787.4ef7427d.chunk.js": "/final-project-start/static/js/787.4ef7427d.chunk.js",
     "static/media/rug.png": "/final-project-start/static/media/rug.2ff7a3b4184992dddc90.png",
     "static/media/rectangleTable.png": "/final-project-start/static/media/rectangleTable.2d0dd48ed2517bea8b76.png",
@@ -44,11 +44,11 @@
     "static/media/roundTable.jpeg": "/final-project-start/static/media/roundTable.9a816039534b0e24fea7.jpeg",
     "index.html": "/final-project-start/index.html",
     "main.39f589df.css.map": "/final-project-start/static/css/main.39f589df.css.map",
-    "main.3a5a9cd8.js.map": "/final-project-start/static/js/main.3a5a9cd8.js.map",
+    "main.ffc8dc05.js.map": "/final-project-start/static/js/main.ffc8dc05.js.map",
     "787.4ef7427d.chunk.js.map": "/final-project-start/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39f589df.css",
-    "static/js/main.3a5a9cd8.js"
+    "static/js/main.ffc8dc05.js"
   ]
 }
