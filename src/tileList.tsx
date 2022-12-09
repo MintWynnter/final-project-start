@@ -4,7 +4,7 @@ const Couch: DragTile = {
     type: "furniture",
     design: "white",
     pos: [0, 0],
-    graphic: "./graphics/couch.jpeg", //file name
+    graphic: "./graphics/couch.png", //file name
     name: "Couch",
     size: [150, 150],
     id: -1,
@@ -20,7 +20,7 @@ const WoodenChair: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: "./graphics/woodChair.jpeg", //file name
+    graphic: "./graphics/woodChair.png", //file name
     name: "Wooden Chair",
     size: [150, 150],
     id: -1,
@@ -36,7 +36,7 @@ const LoveSeat: DragTile = {
     type: "furniture",
     design: "white",
     pos: [0, 0],
-    graphic: "./graphics/loveSeat.jpeg", //file name
+    graphic: "./graphics/loveSeat.png", //file name
     name: "Love Seat",
     size: [150, 150],
     id: -1,
@@ -52,7 +52,7 @@ const roundTable: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: "./graphics/roundTable.jpeg", //file name
+    graphic: "./graphics/roundTable.png", //file name
     name: "Round Coffee Table",
     size: [150, 150],
     id: -1,
@@ -68,7 +68,7 @@ const rectangleTable: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: "./graphics/rectangleTable.jpeg", //file name
+    graphic: "./graphics/rectangleTable.png", //file name
     name: "Rectangle Coffee Table",
     size: [150, 150],
     id: -1,
@@ -84,7 +84,7 @@ const nightStand: DragTile = {
     type: "furniture",
     design: "wood",
     pos: [0, 0],
-    graphic: "./graphics/nightStand.jpeg", //file name
+    graphic: "./graphics/nightStand.png", //file name
     name: "Night Stand",
     size: [150, 150],
     id: -1,
@@ -100,7 +100,7 @@ const fridge: DragTile = {
     type: "appliance",
     design: "stainless steel",
     pos: [0, 0],
-    graphic: "./graphics/fridge.jpeg", //file name
+    graphic: "./graphics/fridge.png", //file name
     name: "Refrigerator",
     size: [150, 150],
     id: -1,
@@ -116,7 +116,7 @@ const stove: DragTile = {
     type: "appliance",
     design: "stainless steel",
     pos: [0, 0],
-    graphic: "./graphics/stove.jpeg", //file name
+    graphic: "./graphics/stove.png", //file name
     name: "Stove",
     size: [150, 150],
     id: -1,
@@ -132,7 +132,7 @@ const countertop: DragTile = {
     type: "kitchen",
     design: "granite",
     pos: [0, 0],
-    graphic: "./graphics/countertop.jpeg",
+    graphic: "./graphics/countertop.png",
     name: "Countertop",
     size: [150, 150],
     id: -1,
