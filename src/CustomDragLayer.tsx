@@ -11,6 +11,15 @@ type layerProps = {
 };
 
 export function CustomDragLayer(props: layerProps): JSX.Element {
+    const dragxOffset = 800;
+    const dragyOffset = 50;
+    const height = "100%";
+    const width = "100%";
+    const defaultID = -1;
+    const defaultx = 0;
+    const defaulty = 0;
+    const defaultSize = 2;
+
     const [{ item }, drop] = useDrop({
         accept: ItemTypes.DragTile,
         collect: (monitor) => ({
@@ -24,11 +33,11 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
                 design: item.data.design,
                 pos: [
                     (notnull(currentOffset).x -
-                        800 +
+                        dragxOffset +
                         (notnull(grabOffset).x - notnull(sourceOffset).x)) *
                         props.scale,
                     (notnull(currentOffset).y -
-                        50 +
+                        dragyOffset +
                         (notnull(grabOffset).y - notnull(sourceOffset).y)) *
                         props.scale
                 ],
@@ -53,9 +62,9 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
         })
     );
     //const [BoxArray, setBoxArray] = useState<DragTile[]>(props.dragt);
-    const [size, setSize] = useState<number>(2);
+    const [size, setSize] = useState<number>(defaultSize);
     function addDragTile(dt: DragTile) {
-        if (dt.id === -1) {
+        if (dt.id === defaultID) {
             props.setBoxArray([...props.BoxArray, { ...dt, id: size }]);
             setSize(size + 1);
             return;
@@ -68,14 +77,14 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
         props.setBoxArray([...props.BoxArray]);
     }
     function notnull(p: null | XYCoord) {
-        return p === null ? { x: 0, y: 0 } : p;
+        return p === null ? { x: defaultx, y: defaulty } : p;
     }
     return (
         <div
             ref={drop}
             style={{
-                height: "100%",
-                width: "100%",
+                height: height,
+                width: width,
                 backgroundColor: "#ff0000",
                 position: "relative"
             }}
