@@ -41,10 +41,10 @@ All files             |       0 |        0 |       0 |       0 |
   Box.tsx             |       0 |        0 |       0 |       0 | 8-105             
   Tile.tsx            |       0 |      100 |       0 |       0 | 6-36              
   dndarr.tsx          |       0 |      100 |       0 |       0 | 14-26             
-  dropdown.tsx        |       0 |        0 |       0 |       0 | 34-152            
+  dropdown.tsx        |       0 |        0 |       0 |       0 | 34-154            
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.646 s
+Time:        3.181 s
 Ran all test suites.
