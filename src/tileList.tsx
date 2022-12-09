@@ -297,7 +297,7 @@ const sidetable: DragTile = {
     type: "Living room",
     design: "wood",
     pos: [defaultpos, defaultpos],
-    graphic: "./graphics/plant.png",
+    graphic: "./graphics/sidetable.png",
     name: "Side Table",
     size: [defaultsize, defaultsize],
     id: defaultID,
