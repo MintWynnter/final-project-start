@@ -33,7 +33,7 @@ export function FilterDropdown({
 
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
-        setFilterArray(choice); //state sent to parent
+        setFilterArray(event.target.value); //state sent to parent
     }
 
     return (
@@ -77,7 +77,7 @@ export function SortDropdown({
 
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
-        setSortArray(choice);
+        setSortArray(event.target.value);
     }
 
     return (
