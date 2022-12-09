@@ -15,22 +15,7 @@ type layerProps = {
 
 export function Menu(props: layerProps) {
     //currently these tiles are not in use, tiles you see on website are in dndarr
-
-    function alphasort(arr: DragTile[]): DragTile[] {
-        arr.sort((a, b) => {
-            if (a.name > b.name) return 1;
-            if (b.name < b.name) return -1;
-            return 0;
-        });
-        return arr;
-    }
-    //function typesort(arr: DragTile[]): DragTile[] {
-    //    return arr.sort((a, b) => {
-    //        if (a.type > b.type) return 1;
-    //        if (b.type < b.type) return -1;
-    //        return 0;
-    //    });
-    //}
+    const [arr, setArr] = useState<DragTile[]>([...tiles]);
 
     const [showModal, setShowModal] = useState(false);
     const handleCloseModal = () => setShowModal(false);
@@ -41,23 +26,10 @@ export function Menu(props: layerProps) {
         handleCloseModal();
     };
 
-    const [SortArray, setSortArray] = useState<string>("None");
-    const [FilterArray, setFilterArray] = useState<string>("None");
     //const [renderVar, setRenderVar] = useState(0);
     //const incRenderVar = renderVar;
     //const [Array, setArray] = useState<DragTile[]>(tiles);
-    console.log(FilterArray);
-    let arr = [...tiles];
-    if (SortArray === "Alphabetical") {
-        console.log("alpha");
-        arr = alphasort(arr);
-        //setArray(alphasort(arr)); breaks website
-        //arr.forEach((item) => console.log(item.name));
-    }
-    if (SortArray === "Tile Type") {
-        arr = tiles.filter((dt: DragTile): boolean => dt.type === "kitchen");
-        //arr.forEach((item) => console.log(item.name));
-    }
+    //console.log(FilterArray);
     return (
         <div
             style={{
@@ -70,8 +42,18 @@ export function Menu(props: layerProps) {
                 <Row>
                     <Col>
                         <FilterDropdown
-                            filterOptions={["Kitchen", "Bathroom", "Bedroom"]}
-                            setFilterArray={setFilterArray}
+                            filterOptions={[
+                                "Kitchen",
+                                "Bathroom",
+                                "Bedroom",
+                                "Furiture",
+                                "Appliance",
+                                "Build",
+                                "Living Room",
+                                "Dining Room"
+                            ]}
+                            setFilterArray={setArr}
+                            filterArray={tiles}
                         ></FilterDropdown>
                     </Col>
                     <Col>
@@ -81,7 +63,8 @@ export function Menu(props: layerProps) {
                                 "Tile Type",
                                 "Design Type"
                             ]}
-                            setSortArray={setSortArray}
+                            setSortArray={setArr}
+                            sortArray={arr}
                         ></SortDropdown>
                     </Col>
                 </Row>

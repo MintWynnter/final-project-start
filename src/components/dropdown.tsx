@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { DragTile } from "../Interfaces/DragTile";
 //import { arrayBuffer } from "stream/consumers";
 //import { DragTile } from "../Interfaces/DragTile";
 /*
@@ -23,17 +24,25 @@ function typesort(arr: DragTile[]): DragTile[] {
 */
 export function FilterDropdown({
     filterOptions,
-    setFilterArray
+    setFilterArray,
+    filterArray
 }: {
     filterOptions: string[];
-    setFilterArray: React.Dispatch<React.SetStateAction<string>>;
+    setFilterArray: React.Dispatch<React.SetStateAction<DragTile[]>>;
+    filterArray: DragTile[];
 }): JSX.Element {
     const default_option = filterOptions[0];
     const [choice, setChoice] = useState<string>(default_option);
 
+    function filter(arr: DragTile[], type: string): DragTile[] {
+        return arr.filter((dt: DragTile) => {
+            return dt.type.toLowerCase() === type.toLowerCase();
+        });
+    }
+
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
-        setFilterArray(event.target.value); //state sent to parent
+        setFilterArray([...filter(filterArray, event.target.value)]); //state sent to parent
     }
 
     return (
@@ -67,17 +76,49 @@ export function FilterDropdown({
 
 export function SortDropdown({
     sortOptions,
-    setSortArray
+    setSortArray,
+    sortArray
 }: {
     sortOptions: string[];
-    setSortArray: React.Dispatch<React.SetStateAction<string>>;
+    setSortArray: React.Dispatch<React.SetStateAction<DragTile[]>>;
+    sortArray: DragTile[];
 }): JSX.Element {
     const default_option = sortOptions[0];
     const [choice, setChoice] = useState<string>(default_option);
 
+    function alphaSort(arr: DragTile[]): DragTile[] {
+        return arr.sort((a, b) => {
+            if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+            else return -1;
+        });
+    }
+
+    function typeSort(arr: DragTile[]): DragTile[] {
+        return arr.sort((a, b) => {
+            if (a.type.toLowerCase() > b.type.toLowerCase()) return 1;
+            else return -1;
+        });
+    }
+
+    function designSort(arr: DragTile[]): DragTile[] {
+        return arr.sort((a, b) => {
+            if (a.design.toLowerCase() > b.design.toLowerCase()) return 1;
+            else {
+                if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+                else return -1;
+            }
+        });
+    }
+
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
-        setSortArray(event.target.value);
+        if (event.target.value === "Alphabetical") {
+            setSortArray([...alphaSort(sortArray)]);
+        } else if (event.target.value === "Tile Type") {
+            setSortArray([...typeSort(sortArray)]);
+        } else {
+            setSortArray([...designSort(sortArray)]);
+        }
     }
 
     return (
