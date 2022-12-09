@@ -10,7 +10,7 @@ export function Trashcan({
     setBoxArray: React.Dispatch<React.SetStateAction<DragTile[]>>;
     boxArray: DragTile[];
 }): JSX.Element {
-    const trashHeight = "20%";
+    const trashHeight = "9%";
     const trashWidth = "20%";
 
     const [{ item }, drop] = useDrop({
