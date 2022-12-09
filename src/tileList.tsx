@@ -1,483 +1,488 @@
 import { DragTile } from "./Interfaces/DragTile";
 
+const defaultpos = 0;
+const defaultsize = 150;
+const defaultID = -1;
+const defaultRotation = 0;
+
 const Couch: DragTile = {
     type: "furniture",
     design: "white",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/couch.png", //file name
     name: "Couch",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const WoodenChair: DragTile = {
     type: "furniture",
     design: "wood",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/woodChair.png", //file name
     name: "Wooden Chair",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const LoveSeat: DragTile = {
     type: "furniture",
     design: "white",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/loveSeat.png", //file name
     name: "Love Seat",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const roundTable: DragTile = {
     type: "furniture",
     design: "wood",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/roundTable.png", //file name
     name: "Round Coffee Table",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const rectangleTable: DragTile = {
     type: "furniture",
     design: "wood",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/rectangleTable.png", //file name
     name: "Rectangle Coffee Table",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const nightStand: DragTile = {
     type: "furniture",
     design: "wood",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/nightStand.png", //file name
     name: "Night Stand",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const fridge: DragTile = {
     type: "appliance",
     design: "stainless steel",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/fridge.png", //file name
     name: "Refrigerator",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const stove: DragTile = {
     type: "appliance",
     design: "stainless steel",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/stove.png", //file name
     name: "Stove",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const countertop: DragTile = {
     type: "kitchen",
     design: "granite",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/countertop.png",
     name: "Countertop",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const door: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/door.png",
     name: "Door",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const bathtub: DragTile = {
     type: "bathroom",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/bathtub.png",
     name: "Bathtub",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const kitchensink: DragTile = {
     type: "Kitchen",
     design: "stainless steel",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/kitchensink.png",
     name: "Kitchen Sink",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const island: DragTile = {
     type: "Kitchen",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/island.png",
     name: "Kitchen Island",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const tv: DragTile = {
     type: "living room",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/tv.png",
     name: "TV",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const bed: DragTile = {
     type: "Bedroom",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/bed.png",
     name: "Door",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const diningtabler: DragTile = {
     type: "Dining room",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/diningtablec.png",
     name: "Rectangle Dining Table",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const diningtablec: DragTile = {
     type: "Dining room",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/diningtablec.png",
     name: "Round Dining Table",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const mplant: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/plant.png",
     name: "Monstera Plant",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const sidetable: DragTile = {
     type: "Living room",
     design: "wood",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/plant.png",
     name: "Side Table",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const dressingtable: DragTile = {
     type: "Bedroom",
     design: "wood",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/dressingtable.png",
     name: "Dressing table",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const twinbed: DragTile = {
     type: "Bedroom",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/twinbed.png",
     name: "Twin Bed",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const doublesink: DragTile = {
     type: "Bathroom",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/doublesink.png",
     name: "Double Bathroom Vanity",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const bathroomSink: DragTile = {
     type: "Bathroom",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/singlevanity.png",
     name: "Single Bathroom Vanity",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const woodfloor: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/woodfloor.png",
     name: "Wood Floor",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const tilefloor: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/tilefloor.png",
     name: "Tile Floor",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const lamp: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/lamp.png",
     name: "Table Lamp",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const stairs: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/stairs.png",
     name: "Stairs",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const carpet: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/carpet.png",
     name: "Carpet",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const rug: DragTile = {
     type: "build",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/rug.png",
     name: "Area Rug",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 const bathrug: DragTile = {
     type: "Bathroom",
     design: "any",
-    pos: [0, 0],
+    pos: [defaultpos, defaultpos],
     graphic: "./graphics/bathrug.png",
     name: "Bathroom Rug",
-    size: [150, 150],
-    id: -1,
+    size: [defaultsize, defaultsize],
+    id: defaultID,
     hasFurniture: false,
     hasPainting: false,
     placeOnWall: false,
     isFill: false,
     comments: [],
-    rotation: 0
+    rotation: defaultRotation
 };
 
 export const tiles = [

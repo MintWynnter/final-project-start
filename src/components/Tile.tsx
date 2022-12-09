@@ -8,6 +8,9 @@ export function Tile(dt: DragTile): JSX.Element {
         setTile({ ...newTile });
     }
 
+    const tileFontsize = 20;
+    const defaultRotation = 0;
+
     return (
         <div
             style={{
@@ -18,7 +21,7 @@ export function Tile(dt: DragTile): JSX.Element {
             <span
                 style={{
                     color: "#00ff00",
-                    fontSize: 20
+                    fontSize: tileFontsize
                 }}
             >
                 {tile.name}
@@ -43,7 +46,7 @@ export function Tile(dt: DragTile): JSX.Element {
                         placeOnWall: false,
                         isFill: false,
                         comments: [],
-                        rotation: 0
+                        rotation: defaultRotation
                     })
                 }
             >

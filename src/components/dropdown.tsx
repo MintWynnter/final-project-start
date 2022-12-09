@@ -34,6 +34,11 @@ export function FilterDropdown({
     const default_option = filterOptions[0];
     const [choice, setChoice] = useState<string>(default_option);
 
+    const dropdownBottom = "10%";
+    const dropdownLeft = "0%";
+    const dropdownHeight = "20%";
+    const dropdownWidth = "95%";
+
     function filter(arr: DragTile[], type: string): DragTile[] {
         return arr.filter((dt: DragTile) => {
             return dt.type.toLowerCase() === type.toLowerCase();
@@ -53,10 +58,10 @@ export function FilterDropdown({
             <div
                 className="bg-grey border m-2 p-2"
                 style={{
-                    bottom: "10%",
-                    left: "0%",
-                    height: "20%",
-                    width: "95%"
+                    bottom: dropdownBottom,
+                    left: dropdownLeft,
+                    height: dropdownHeight,
+                    width: dropdownWidth
                 }}
             >
                 <Form.Group controlId="formChoice">
@@ -85,6 +90,11 @@ export function SortDropdown({
 }): JSX.Element {
     const default_option = sortOptions[0];
     const [choice, setChoice] = useState<string>(default_option);
+
+    const dropdownBottom = "70%";
+    const dropdownLeft = "0%";
+    const dropdownHeight = "20%";
+    const dropdownWidth = "95%";
 
     function alphaSort(arr: DragTile[]): DragTile[] {
         return arr.sort((a, b) => {
@@ -129,10 +139,10 @@ export function SortDropdown({
             <div
                 className="bg-grey border m-2 p-2"
                 style={{
-                    bottom: "70%",
-                    left: "0%",
-                    height: "20%",
-                    width: "95%"
+                    bottom: dropdownBottom,
+                    left: dropdownLeft,
+                    height: dropdownHeight,
+                    width: dropdownWidth
                 }}
             >
                 <Form.Group controlId="formChoice">

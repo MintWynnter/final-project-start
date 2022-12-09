@@ -26,6 +26,14 @@ export function Menu(props: layerProps) {
         handleCloseModal();
     };
 
+    const menuWidth = "51.6%";
+    const menuHeight = "62%";
+    const menuTop = "2px";
+    const Width = "100%";
+    const Height = "80%";
+    const scrollbarHeight = "93%";
+    const scrollbarWidth = "101.5%";
+
     //const [renderVar, setRenderVar] = useState(0);
     //const incRenderVar = renderVar;
     //const [Array, setArray] = useState<DragTile[]>(tiles);
@@ -33,9 +41,9 @@ export function Menu(props: layerProps) {
     return (
         <div
             style={{
-                width: "51.6%",
-                height: "62%",
-                top: "2px"
+                width: menuWidth,
+                height: menuHeight,
+                top: menuTop
             }}
         >
             <Container>
@@ -46,7 +54,7 @@ export function Menu(props: layerProps) {
                                 "Kitchen",
                                 "Bathroom",
                                 "Bedroom",
-                                "Furiture",
+                                "Furniture",
                                 "Appliance",
                                 "Build",
                                 "Living Room",
@@ -71,8 +79,8 @@ export function Menu(props: layerProps) {
             </Container>
             <Container
                 style={{
-                    height: "80%",
-                    width: "100%"
+                    height: Height,
+                    width: Width
                 }}
             >
                 <Row>
@@ -103,8 +111,8 @@ export function Menu(props: layerProps) {
                 <div
                     className="my-custom-scrollbar"
                     style={{
-                        width: "101.5%",
-                        height: "93%",
+                        width: scrollbarWidth,
+                        height: scrollbarHeight,
                         overflow: "auto",
                         display: "inline-block"
                     }}
