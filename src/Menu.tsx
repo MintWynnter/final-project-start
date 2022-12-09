@@ -24,13 +24,13 @@ export function Menu(props: layerProps) {
         });
         return arr;
     }
-    function typesort(arr: DragTile[]): DragTile[] {
-        return arr.sort((a, b) => {
-            if (a.type > b.type) return 1;
-            if (b.type < b.type) return -1;
-            return 0;
-        });
-    }
+    //function typesort(arr: DragTile[]): DragTile[] {
+    //    return arr.sort((a, b) => {
+    //        if (a.type > b.type) return 1;
+    //        if (b.type < b.type) return -1;
+    //        return 0;
+    //    });
+    //}
 
     const [showModal, setShowModal] = useState(false);
     const handleCloseModal = () => setShowModal(false);
@@ -43,17 +43,19 @@ export function Menu(props: layerProps) {
 
     const [SortArray, setSortArray] = useState<string>("None");
     const [FilterArray, setFilterArray] = useState<string>("None");
+    //const [renderVar, setRenderVar] = useState(0);
+    //const incRenderVar = renderVar;
     //const [Array, setArray] = useState<DragTile[]>(tiles);
     console.log(FilterArray);
     let arr = [...tiles];
     if (SortArray === "Alphabetical") {
         console.log("alpha");
-        alphasort(arr);
+        arr = alphasort(arr);
         //setArray(alphasort(arr)); breaks website
         //arr.forEach((item) => console.log(item.name));
     }
     if (SortArray === "Tile Type") {
-        arr = typesort(arr);
+        arr = tiles.filter((dt: DragTile): boolean => dt.type === "kitchen");
         //arr.forEach((item) => console.log(item.name));
     }
     return (
