@@ -95,27 +95,29 @@ export function SortDropdown({
     const dropdownLeft = "0%";
     const dropdownHeight = "20%";
     const dropdownWidth = "95%";
+    const pass = 1;
+    const fail = -1;
 
     function alphaSort(arr: DragTile[]): DragTile[] {
         return arr.sort((a, b) => {
-            if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-            else return -1;
+            if (a.name.toLowerCase() > b.name.toLowerCase()) return pass;
+            else return fail;
         });
     }
 
     function typeSort(arr: DragTile[]): DragTile[] {
         return arr.sort((a, b) => {
-            if (a.type.toLowerCase() > b.type.toLowerCase()) return 1;
-            else return -1;
+            if (a.type.toLowerCase() > b.type.toLowerCase()) return pass;
+            else return fail;
         });
     }
 
     function designSort(arr: DragTile[]): DragTile[] {
         return arr.sort((a, b) => {
-            if (a.design.toLowerCase() > b.design.toLowerCase()) return 1;
+            if (a.design.toLowerCase() > b.design.toLowerCase()) return pass;
             else {
-                if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-                else return -1;
+                if (a.name.toLowerCase() > b.name.toLowerCase()) return pass;
+                else return fail;
             }
         });
     }

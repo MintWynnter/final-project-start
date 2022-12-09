@@ -20,7 +20,7 @@ function App(): JSX.Element {
     const boxWidth = "800px";
     const boxLeft = "800px";
     const boxTop = "50px";
-    const headerWidth = "50%";
+    const scaleWidth = "10%";
     const defaultScale = 1;
 
     return (
@@ -50,10 +50,10 @@ function App(): JSX.Element {
                         boxArray={BoxArray}
                         setBoxArray={setBoxArray}
                     ></Trashcan>
-                    {/*<Box name="couch" id={1}></Box>*/}
                 </div>
-                <h1> Harleen Chahal, Sean OSullivan, Matthew Hansen </h1>
-                <div style={{ width: headerWidth, border: "7px solid white" }}>
+                <h1> Interior Design </h1>
+                <h5> Harleen Chahal, Sean OSullivan, Matthew Hansen</h5>
+                <div style={{ width: scaleWidth, border: "7px solid white" }}>
                     <Form.Group>
                         <Form.Label>Scale</Form.Label>
                         <Form.Control
@@ -72,21 +72,6 @@ function App(): JSX.Element {
                     </Form.Group>
                 </div>
                 <Menu setBoxArray={setBoxArray} scale={scale}></Menu>
-                {/*<DndArray />
-                <Row style={{ height: "700px" }}>
-                    <Col>
-                        <FilterDropdown
-                            filterOptions={["Kitchen", "Bathroom", "Bedroom"]}
-                        ></FilterDropdown>
-                        <SortDropdown
-                            sortOptions={[
-                                "Alphabetical",
-                                "Tile Type",
-                                "Design Type"
-                            ]}
-                        ></SortDropdown>
-                    </Col>
-                        </Row>*/}
             </DndProvider>
         </div>
     );

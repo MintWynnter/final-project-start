@@ -85,7 +85,7 @@ export function CustomDragLayer(props: layerProps): JSX.Element {
             style={{
                 height: height,
                 width: width,
-                backgroundColor: "#ff0000",
+                backgroundColor: "#ADD8E6",
                 position: "relative"
             }}
         >
