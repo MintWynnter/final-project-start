@@ -8,6 +8,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { Menu } from "./Menu";
 import { DndProvider } from "react-dnd";
 import { DragTile } from "./Interfaces/DragTile";
+import { Trashcan } from "./Trash";
 
 function App(): JSX.Element {
     const [scale, setScale] = useState<number>(1);
@@ -45,6 +46,10 @@ function App(): JSX.Element {
                         BoxArray={BoxArray}
                         setBoxArray={setBoxArray}
                     ></CustomDragLayer>
+                    <Trashcan
+                        boxArray={BoxArray}
+                        setBoxArray={setBoxArray}
+                    ></Trashcan>
                     {/*<Box name="couch" id={1}></Box>*/}
                 </div>
                 <h1> Harleen Chahal, Sean OSullivan, Matthew Hansen </h1>
