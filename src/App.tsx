@@ -15,6 +15,13 @@ function App(): JSX.Element {
     //parent BoxArray that is edited by children Menu.tsx in clearBoard function and CustomDragLayer
     //purpose is for clear button in Menu.tsx to access the CustomDragLayer.tsx's current board state and clear it
 
+    const boxHeight = "600px";
+    const boxWidth = "800px";
+    const boxLeft = "800px";
+    const boxTop = "50px";
+    const headerWidth = "50%";
+    const defaultScale = 1;
+
     return (
         <div
             style={{
@@ -26,10 +33,10 @@ function App(): JSX.Element {
             <DndProvider backend={HTML5Backend}>
                 <div
                     style={{
-                        height: "600px",
-                        width: "800px",
-                        left: "800px",
-                        top: "50px",
+                        height: boxHeight,
+                        width: boxWidth,
+                        left: boxLeft,
+                        top: boxTop,
                         position: "absolute"
                     }}
                 >
@@ -41,7 +48,7 @@ function App(): JSX.Element {
                     {/*<Box name="couch" id={1}></Box>*/}
                 </div>
                 <h1> Harleen Chahal, Sean OSullivan, Matthew Hansen </h1>
-                <div style={{ width: "50%", border: "7px solid white" }}>
+                <div style={{ width: headerWidth, border: "7px solid white" }}>
                     <Form.Group>
                         <Form.Label>Scale</Form.Label>
                         <Form.Control
@@ -53,7 +60,7 @@ function App(): JSX.Element {
                                 setScale(
                                     parseInt(event.target.value)
                                         ? parseInt(event.target.value)
-                                        : 1
+                                        : defaultScale
                                 )
                             }
                         />

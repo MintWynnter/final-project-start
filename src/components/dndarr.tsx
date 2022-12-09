@@ -10,6 +10,10 @@ export function DndArray(prop: layerProps): JSX.Element {
     //const [dragarr, setarr] = useState<DragTile[]>(tiles); //, test2]);
 
     //we will likely have this be in a higher component that will pass down the filled array
+
+    const keyMultiplier = 3;
+    const fontsize = 14;
+
     return (
         <div
             id="dndarr"
@@ -21,7 +25,7 @@ export function DndArray(prop: layerProps): JSX.Element {
             {prop.dragarr.map((tile: DragTile) => {
                 return (
                     <div
-                        key={tile.id * 3}
+                        key={tile.id * keyMultiplier}
                         style={{
                             display: "inline-block",
                             border: "1px solid black"
@@ -29,7 +33,7 @@ export function DndArray(prop: layerProps): JSX.Element {
                     >
                         <h2
                             style={{
-                                fontSize: 14,
+                                fontSize: fontsize,
                                 textAlign: "center"
                             }}
                         >

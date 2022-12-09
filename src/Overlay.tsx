@@ -5,16 +5,23 @@ type OverlayProps = {
 };
 
 const Overlay: React.FC<OverlayProps> = (props) => {
+    const Otop = 0;
+    const Oleft = 0;
+    const Oheight = "100%";
+    const Owidth = "100%";
+    const Ozindex = 1;
+    const Oopacity = 0.5;
+
     return (
         <div
             style={{
                 position: "absolute",
-                top: 0,
-                left: 0,
-                height: "100%",
-                width: "100%",
-                zIndex: 1,
-                opacity: 0.5,
+                top: Otop,
+                left: Oleft,
+                height: Oheight,
+                width: Owidth,
+                zIndex: Ozindex,
+                opacity: Oopacity,
                 backgroundColor: props.color
             }}
         />
